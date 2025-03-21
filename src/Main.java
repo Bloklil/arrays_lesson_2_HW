@@ -21,7 +21,7 @@ public class Main {
                 minSalary = salaryComp[i];
             }
         }
-        System.out.println("Максимальная сумма трат за неделю составила " + minSalary + " рублей");
+        System.out.println("Минимальная сумма трат за неделю составила " + minSalary + " рублей");
         System.out.println("Задание 3");
         int[] salaryPipls = {56_900, 45_000, 34_120, 12_190, 159_900};
         double sumPipl = Arrays.stream(salaryPipls).sum();
