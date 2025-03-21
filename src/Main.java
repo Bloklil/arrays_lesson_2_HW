@@ -1,5 +1,41 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        System.out.println("Задание 1");
+        int[] salary = {21_900, 22_000, 11_120, 14_190, 11_900};
+        int totalSalary = Arrays.stream(salary).sum();
+        System.out.println("Сумма зарплат за месяц составила " + totalSalary + " рублей");
+        System.out.println("Задание 2");
+        int[] salaryComp = {39_900, 29_000, 19_120, 19_190, 9_900};
+        int minSalary = 99999999;
+        int maxSalary = 0;
+        for (int j : salaryComp) {
+            if (j > maxSalary) {
+                maxSalary = j;
+            }
+        }
+        System.out.println("Максимальная сумма трат за неделю составила " + maxSalary + " рублей");
+        for (int j : salaryComp) {
+            if (j < minSalary) {
+                minSalary = j;
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила " + minSalary + " рублей");
+        System.out.println("Задание 3");
+        int[] salaryPeople = {56_900, 45_000, 34_120, 12_190, 159_900};
+        double sumPeople = Arrays.stream(salaryPeople).sum();
+        double average = sumPeople / salaryPeople.length;
+        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+        System.out.println("Задание 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I' };
+        int length = reverseFullName.length;
+        for (int i = 0; i < length / 2; i++) {
+            char temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[length - 1 - i];
+            reverseFullName[length - 1 - i] = temp;
+        }
+        System.out.println(reverseFullName);
     }
 }
+
